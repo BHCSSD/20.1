@@ -8,7 +8,7 @@ We have periodically used functions in our previous units.
 - rect()
 - random()
   
-They do stuff for us so we don't need to keep coding the same things over and over. Imagine having to code random() every time you needed it last year?
+They do stuff for us so we don't need to keep coding the same things over and over. Imagine having to code the logic for random() every time you needed it last year.
 
 As you start learning to work with functions, a general rule of thumb is to have a function only do 1 thing. 
 - figure out the area of a square
@@ -16,14 +16,14 @@ As you start learning to work with functions, a general rule of thumb is to have
 - deal with key press
   
 ## Before we start
-There are a few key words you need to know by the end of this unit:
+There are a few keywords you need to know by the end of this unit:
 - **Function**
 - **Parameter**
 - **Argument**
 - **Return Value**
 - **Scope**
-- **Local Variable**
-- **Global Variable**
+  - **Local Variable**
+  - **Global Variable**
   
 
 # 1.1 Writing Your Own Functions

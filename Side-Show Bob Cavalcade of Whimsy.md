@@ -1,0 +1,123 @@
+# Side-Show Bob Cavalcade of Whimsy
+
+## Model
+
+```javascript
+let allNames = ["Serena", "Marco", "Amrit"];
+let allPass = ["1234", "1235", "1236"];
+let allBalances = [500, 123.50, 100];
+let isLoggedIn = false;
+let accountNum = -1;
+
+function login(usernames, passwords, u, p) {
+    for (let i = 0; i < usernames.length; i++) {
+        if (usernames[i] === u && passwords[i] === p) {
+            accountNum = i;
+            return true;
+        }
+    }
+    return false;
+}
+
+function withdraw(balance, amount) {
+    if (balance >= amount) {
+        return balance - amount;
+    } else {
+        return balance;
+    }
+}
+
+function deposit(balance, amount) {
+    return balance + amount;
+}
+
+
+```
+
+## View
+
+```javascript
+function setup() {
+    createCanvas(800, 600);
+    background(200, 0, 80);
+    textSize(40);
+    fill(255);
+    displayInitialPrompt();
+}
+
+function draw() {
+    // leave draw empty
+}
+
+function displayInitialPrompt() {
+    text("Press e to enter your account info.", 50, 100);
+}
+
+function displayLoginResult(isValid) {
+    if (!isValid) {
+        text("Invalid username or password.", 50, 130);
+    }
+}
+
+function displayLoggedInOptions() {
+    text("Press b to print your balance.", 50, 130);
+    text("Press d to deposit", 50, 150);
+    text("Press w to withdraw", 50, 170);
+}
+
+function displayBalance(balance) {
+    text("Your balance is: $" + balance.toFixed(2), 50, 190);
+}
+
+function displayInsufficientFunds() {
+    text("Insufficient funds.", 50, 190);
+}
+
+```
+
+## Controller
+
+```javascript
+function keyPressed() {
+    background(200, 0, 80);
+    textSize(40);
+    fill(255);
+    displayInitialPrompt();
+
+    if (key === 'e' && !isLoggedIn) {
+        let account = window.prompt("What is your username?");
+        let pass = window.prompt("What is your password?");
+        isLoggedIn = login(allNames, allPass, account, pass);
+        displayLoginResult(isLoggedIn);
+    }
+
+    if (isLoggedIn) {
+        displayLoggedInOptions();
+
+        if (key === 'b') {
+            displayBalance(allBalances[accountNum]);
+        }
+        if (key === 'd') {
+            let depositAmount = parseFloat(window.prompt("How much are you depositing?"));
+            if (!isNaN(depositAmount) && depositAmount > 0) {
+                allBalances[accountNum] = deposit(allBalances[accountNum], depositAmount);
+                displayBalance(allBalances[accountNum]);
+            }
+        }
+        if (key === 'w') {
+            let withdrawAmount = parseFloat(window.prompt("How much do you want to withdraw?"));
+            if (!isNaN(withdrawAmount) && withdrawAmount > 0) {
+                let newBalance = withdraw(allBalances[accountNum], withdrawAmount + 0.50);
+                if (newBalance !== allBalances[accountNum]) {
+                    allBalances[accountNum] = newBalance;
+                    displayBalance(allBalances[accountNum]);
+                } else {
+                    displayInsufficientFunds();
+                }
+            }
+        }
+    }
+}
+
+```
+

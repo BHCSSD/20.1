@@ -10,6 +10,7 @@ There are a few keywords you need to know by the end of this unit:
   - **Local Variable**
   - **Global Variable**
 
+## 
 Functions are the building blocks of programming. All your code should be in well-defined, well-named, well-written, and well-tested functions. This is the hallmark of a strong intermediate programmer.
 
 We have periodically used functions in our previous units. 

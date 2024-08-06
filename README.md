@@ -61,7 +61,6 @@ This code defines a new function named `cubed`. The function takes one parameter
 
 **Question: True or False: every function call returns some value?**
 
-**Answer:** True. If your function does not explicitly return a value, JavaScript will return `undefined` for you.
 
 ## Another Example
 
@@ -212,8 +211,7 @@ Here, `double()` is a helper function for `largerDouble()`. We could have writte
 
 In general, you should embrace using helper functions liberally. In fact, we will often require specific helper functions in the exercises to help you get used to this very effective approach.
 
-**Checkpoint 1**
+**Checkpoint**
 
 True or False: You can write multiple helper functions for one function.
 
-- **Answer:** True

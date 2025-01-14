@@ -10,6 +10,12 @@ There are a few keywords you need to know by the end of this unit:
   - **Local Variable**
   - **Global Variable**
 
+## videos for review 
+- [Basics](https://thecodingtrain.com/tracks/code-programming-with-p5-js/code/5-functions/1-basics)
+- [Function Parameters and Arguments](https://thecodingtrain.com/tracks/code-programming-with-p5-js/code/5-functions/2-arguments)
+- [Functions & Return](https://thecodingtrain.com/tracks/code-programming-with-p5-js/code/5-functions/3-return)
+
+
 ## 
 Functions are the building blocks of programming. All your code should be in well-defined, well-named, well-written, and well-tested functions. This is the hallmark of a strong intermediate programmer.
 

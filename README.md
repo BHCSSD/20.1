@@ -47,7 +47,7 @@ console.log(cubed(2)); // prints 8
 console.log(cubed(3)); // prints 27
 ```
 
-This code defines a new function named `cubed`. The function takes one parameter, `n`, and returns `n^3`. The code then calls the function twice.
+This code defines a new function named `cubed`. The function takes one parameter, `n`, and returns `n^3` (note `**` means power). The code then calls the function twice.
 
 ## Important points:
 
@@ -59,10 +59,10 @@ This code defines a new function named `cubed`. The function takes one parameter
 
 - The rest of the function definition is the function body. Note:
   - The body is always enclosed in curly braces `{}` inside the function definition.
-  - The body should contain a `return` statement, which immediately ends the function and returns the result of the call to that function.
+  - The body should contain a `return` statement, which **immediately** ends the function and returns the result of the call to that function.
   - If the function completes without a `return` statement, then JavaScript automatically returns the value `undefined`.
   
-- Once a function is defined, you can call it just like any other function.
+- Once a function is defined, you can call it just like any other function: `rect(10,10,10,10)`,`circle(100,100,50`) etc
 - When you call the function, you must provide arguments, one for each parameter, in order.
 
 **Question: True or False: every function call returns some value?**

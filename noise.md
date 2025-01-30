@@ -29,15 +29,17 @@ You can use `noise()` to create smooth motion in animations.
 
 ```javascript
 let xoff = 0;
+let cy
 
 function setup() {
   createCanvas(400, 400);
+  cy=height / 2
 }
 
 function draw() {
   background(220);
   let x = noise(xoff) * width;
-  ellipse(x, height / 2, 40, 40);
+  ellipse(x, cy , 40, 40);
   xoff += 0.01;
 }
 ```
